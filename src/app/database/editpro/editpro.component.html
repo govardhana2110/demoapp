@@ -1,0 +1,38 @@
+<div class="container">
+  <form [formGroup]='pro_edit'(ngSubmit)="proedit()">
+    <div class="form-group">
+      <input class="form-control" placeholder="Enter Id" formControlName="pro_id">
+
+    </div>
+    <div class="form-group">
+      <input class="form-control" placeholder="Enter Name" formControlName="pro_name">
+
+    </div>
+    <div class="form-group">
+      <input class="form-control" placeholder="Enter price" formControlName="pro_price">
+
+    </div>
+    <div class="form-group">
+      <input class="form-control" placeholder="Enter Dec" formControlName="pro_dec">
+
+    </div>
+    <div class="form-group">
+      <input class="form-control" placeholder="Enter Quantity" formControlName="pro_qty">
+
+    </div>
+    <div class="form-group">
+      <input class="form-control" placeholder="Enter Mfg" formControlName="pro_mfg">
+
+    </div>
+    <div class="form-group">
+      <input class="form-control" placeholder="Enter Image" formControlName="pro_img">
+
+    </div>
+    <div class="form_group">
+      <button type="submit" class="btn btn-primary">Edit Product</button>
+
+    </div>
+
+  </form>
+
+</div>

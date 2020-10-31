@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>{{str}}</h1>
+  <h2>{{str | uppercase}}</h2>
+  <h3>{{str | lowercase}}</h3>
+  <h4>{{str | titlecase}}</h4>
+  <h3>{{str | slice : 1:9}}</h3>
+  <h5>{{object | json}}</h5>
+  <h5>{{number | percent }}</h5>
+  <h6>{{date | date :'dd/mm/yy'}}</h6>
+  <h6>{{currency | currency :'INR'}}</h6>
+
+  <form>
+  <h1>select price in:-</h1>
+  <select name="money">
+  <option value="USD">USD</option>
+  <option value="INR">INR</option>
+  <option value="EUR">EUR</option>
+  </select>
+</form>
+<br>
+<input type="number" [(ngModel)]="money" class="form-control" placeholder="money"><br>
+  <!--button (click)="onbuttonclick()" class="btn btn-primary">money is</button-->
+
+</div>

@@ -1,0 +1,11 @@
+container{
+  box-sizing: border-box ;
+  width: 50%;
+  border: 1px groove ;
+  float: middle;
+  position: absolute; top: 50px ;
+  position: absolute; left: 400px;
+}
+.lblError {
+  color:orangered;
+}

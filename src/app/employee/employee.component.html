@@ -1,0 +1,21 @@
+<div class="container">
+  <form (ngSubmit)="onempadd()">
+    <div class="form-group">
+      <label>Employee email</label><br>
+      <input type="text" ngModel required placeholder="enter email" class="form-controle">
+    </div>
+    <div class="form-group">
+      <label>Employee name</label><br>
+      <input type="text" ngModel required placeholder="enter name" class="form-controle">
+    </div>
+    <div class="form-group">
+      <label>Employee salary</label><br>
+      <input type="number" ngModel required placeholder="enter salary" class="form-controle">
+    </div>
+    <div class="form-group">
+      <label>Employee city</label><br>
+      <input type="text" ngModel required placeholder="enter city" class="form-controle">
+    </div>
+    <button type="submit" class="form controle btn btn-primary">add emp</button>
+  </form>
+</div>

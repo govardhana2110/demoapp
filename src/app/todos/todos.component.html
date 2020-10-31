@@ -1,0 +1,150 @@
+<div class="container">
+  <div class="row">
+    <h3>ADD TODOS</h3>
+    <input type="number" [(ngModel)]="id" class="form-control" placeholder="Enter Id"><br>
+    <input type="text" [(ngModel)]="title" class="form-control" placeholder="Enter Title"><br>
+    <input type="text" [(ngModel)]="status" class="form-control" placeholder="Enter Status">
+    <h4 class="title" >status</h4>
+    <!-- <label class="radiocontainer">Done
+      <input type="radio">
+      <span class="circle"></span>
+    </label><br>
+    <label class="radiocontainer">Pending
+      <input type="radio">
+      <span class="circle"></span>
+    </label><br><br> -->
+    <button (click)="onTaskAdd()" class="btn btn-primary">Add Task</button>
+    <body>
+    <!-- <div class="container">
+    <a href="#">Add Task</a>
+    </div> -->
+  </body>
+
+
+
+  </div>
+  <div class="row">
+    <h3> Todos</h3>
+    <table class="table">
+      <thead>
+        <th style="border: black solid 1px; text-align: center;">ID</th>
+        <th style="border: black solid 1px; text-align: center;" position="middle">TITLE</th>
+        <th style="border: black solid 1px; text-align: center;">STATUS</th>
+
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of arrTodos">
+          <td style="border: black silid 1px;text-align: center;">{{item.id}}</td>
+          <td style="border: black silid 1px;text-align: center;">{{item.title}}</td>
+          <!--<td *ngIf="item.status=='pending'"> <span style="color:red ;"> {{item.status}} </span> </td>
+        <td *ngIf="item.status=='done'"> <span style="color:green ;"> {{item.status}} </span> </td>-->
+          <td> <span [ngClass]="{done: item.status=='done','pending':item.status=='pending'}"> {{item.status}} </span>
+          </td>
+          <td>
+            <button (click)="onDeleteTask(item)" style="background-color: red;">Delete</button>
+            <button (click)="onEditTask(item)" style="background-color: blue;">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <h3>ADD EMPLOYEE</h3>
+    <input type="text" [(ngModel)]="user_email" class="form-control" placeholder="Enter EID"><br>
+    <input type="text" [(ngModel)]="user_name" class="form-control" placeholder="Enter ENAME"><br>
+    <input type="text" [(ngModel)]="password" class="form-control" placeholder="Enter SALARY"><br>
+    <input type="text" [(ngModel)]="user_phonenumber" class="form-control" placeholder="Enter ADDRESS"><br>
+    <!--input type="text" [(ngModel)]="status" class="form-control" placeholder="Enter STATUS"--><br>
+    <form>
+      <!-- <h5>Status:-</h5>
+      <select name="status">
+        <option value="done"> done</option>
+        <option value="pending">pending</option>
+      </select><br> -->
+    </form><br><br>
+    <button (click)="onAddEmp()" class="btn btn-primary">Add Employee</button>
+  </div>
+  <div class="row">
+    <h3> EMPLOYEE</h3>
+    <table class="table">
+      <thead>
+        <th style="border: black solid 1px; text-align: center;">EID</th>
+        <th style="border: black solid 1px; text-align: center;">ENAME</th>
+        <th style="border: black solid 1px; text-align: center;">SALARY</th>
+        <th style="border: black solid 1px;text-align: center;">ADDRESS</th>
+        <th  style="border: black solid 1px;text-align: center;">STSTUS</th>
+
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of arrdetails">
+          <td style="border: black silid 1px;text-align: center;">{{item.user_email}}</td>
+          <td style="border: black silid 1px; text-align: center;">{{item.user_name}}</td>
+          <td style="border: black silid 1px; text-align: center;">{{item.password}}</td>
+          <td style="border: black silid 1px; text-align: center;">{{item.user_phonenumber}}</td>
+          <!-- <td *ngIf="item.status=='pending'"> <span style="color:red ;"> {{item.status}} </span> </td>
+        <td *ngIf="item.status=='done'"> <span style="color:green ;"> {{item.status}} </span> </td> -->
+          <!-- <td> <span [ngClass]="{done: item.status=='done','pending':item.status=='pending'}"> {{item.status}} </span>
+          </td> -->
+          <td>
+            <button (click)="onDeleteEmp(item)" style="background-color: red;">Delete</button>
+            <!-- <button (click)="onEditEmp(item)" style="background-color: blue;">Edit</button> -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <h3>ADD PRODUCT</h3>
+    <input type="text" [(ngModel)]="pro_id" class="form-control" placeholder="Enter COMPANY"><br>
+    <input type="text" [(ngModel)]="pro_name" class="form-control" placeholder="Enter PRODUCT"><br>
+    <input type="text" [(ngModel)]="pro_price" class="form-control" placeholder="Enter TYPE"><br>
+    <input type="text" [(ngModel)]="pro_dec" class="form-control" placeholder="Enter COST"><br>
+    <input type="text" [(ngModel)]="pro_qty" class="form-control" placeholder="Enter STATUS"><br>
+    <input type="text" [(ngModel)]="pro_mfg" class="form-control" placeholder="Enter STATUS"><br>
+    <input type="text" [(ngModel)]="pro_img" class="form-control" placeholder="Enter STATUS"><br>
+    <button (click)="onAddProduct()" class="btn btn-primary">Add Product</button>
+  </div>
+  <div class="row">
+    <h3> PRODUCT</h3>
+    <table class="table">
+      <thead>
+        <th style="border: black solid 1px;text-align: center;">COMPANY</th>
+        <th  style="border: black solid 1px;text-align: center;">PRODUCT</th>
+        <th style="border: black solid 1px;text-align: center;">TYPE</th>
+        <th style="border: black solid 1px;text-align: center;">PID</th>
+        <th style="border: black solid 1px;text-align: center;">COST</th>
+        <th style="border: black solid 1px;text-align: center;" >STATUS</th>
+        <th style="border: black solid 1px;text-align: center;" >STATUS</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of arrproduct">
+          <td style="border: black silid 1px;text-align: center;">{{item.pro_id}}</td>
+          <td style="border: black silid 1px; text-align: center;">{{item.pro_name}}</td>
+          <td style="border: black silid 1px; text-align: center;">{{item.pro_price}}</td>
+          <td style="border: black silid 1px; text-align: center;">{{item.pro_dec}}</td>
+          <td style="border: black silid 1px; text-align: center;">{{item.pro_qty}}</td>
+          <td style="border: black silid 1px; text-align: center;">{{item.pro_mfg}}</td>
+          <td style="border: black silid 1px; text-align: center;">{{item.pro_img}}</td>
+          <!-- <td *ngIf="item.status=='pending'"> <span style="color:red ;"> {{item.status}} </span> </td>
+        <td *ngIf="item.status=='done'"> <span style="color:green ;"> {{item.status}} </span> </td> -->
+          <!-- <td> <span [ngClass]="{done: item.status=='done','pending':item.status=='pending'}"> {{item.status}} </span>
+          </td> -->
+          <td>
+            <button (click)="onDeleteProduct(item)" style="background-color: red;">Delete</button>
+            <!-- <button (click)="onEditProduct(item)" style="background-color: blue;">Edit</button> -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- <div class="container">
+  <div class="row">
+    <h3>loin form</h3>
+    <input type="number" [(ngModel)]="id" class="form-control" placeholder="Enter Id"><br>
+    <input type="text" [(ngModel)]="name" class="form-control" placeholder="Enter Title"><br>
+    <input type="text" [(ngModel)]="status" class="form-control" placeholder="Enter Status"> -->

@@ -1,0 +1,33 @@
+<!--div class="container">
+<h1>Welcome Govardhana Reddy</h1>
+<input type="number"[(ngModel)]="number" class="form-control" placeholder="enter number"><br>
+<button (click)="onbuttonclick()" class="btn btn-primary">Click</button>
+</div-->
+<div align="center">
+  <div classss="container" >
+    <div>&nbsp;</div>
+   <div class="row" style="background-color:#bbb;" >
+<div>&nbsp;</div>
+<h3 align="center">Table Creation</h3>
+<input type="number " [(ngModel)]="id" placeholder="Enter Number ">&nbsp;&nbsp;
+<button class="btn btn-primary"(click)="onsubmit()" (click)="onClickShowTable()">submit</button>
+<div>&nbsp;</div>
+  <div *ngIf="flag">
+    <div align="center" style="box-sizing: border-box; width: 25%; border: 2px double indigo; float:center;">
+      <h5>{{id}} * 1 = {{tab1}}</h5>
+      <h5>{{id}} * 2 = {{tab2}}</h5>
+      <h5>{{id}} * 3 = {{tab3}}</h5>
+      <h5>{{id}} * 4 = {{tab4}}</h5>
+      <h5>{{id}} * 5 = {{tab5}}</h5>
+      <h5>{{id}} * 6 = {{tab6}}</h5>
+      <h5>{{id}} * 7 = {{tab7}}</h5>
+      <h5>{{id}} * 8 = {{tab8}}</h5>
+      <h5>{{id}} * 9 = {{tab9}}</h5>
+      <h5>{{id}} * 10 = {{tab10}}</h5>
+  </div>
+<br>
+</div>
+  </div>
+</div>
+
+
